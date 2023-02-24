@@ -39,7 +39,7 @@ public class Steps {
           .post("/bot")
           .header("Content-Type", "application/json")
           .header("user-hash","gatlingUser4")
-          .body(StringBody("{\"message\": \"string\", \"model\": \"BABBAGE\"}"))
+          .body(StringBody("{\"message\": \"string\", \"model\": \"CURIE\"}"))
           .check(HttpDsl.status().is(200))
   );
 
