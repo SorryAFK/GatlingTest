@@ -5,9 +5,10 @@ import io.gatling.javaapi.core.Simulation;
 import io.gatling.javaapi.http.HttpDsl;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
 
-public class GatlingTest extends Simulation  {
+public class GatlingTest extends Simulation {
+
   HttpProtocolBuilder httpProtocol = HttpDsl.http
-      .baseUrl( "http://gptua-env.eba-8ie5nmtu.eu-central-1.elasticbeanstalk.com/");
+      .baseUrl("http://gptua-env.eba-8ie5nmtu.eu-central-1.elasticbeanstalk.com/");
 
   public GatlingTest() {
     this.setUp(

@@ -4,6 +4,7 @@ import io.gatling.javaapi.core.CoreDsl;
 import io.gatling.javaapi.core.ScenarioBuilder;
 
 public class Scenario {
+
   public static ScenarioBuilder sendMessageScenario1 = CoreDsl.scenario("Send message scenario1")
       .exec(Steps.sendMessageReq1);
   public static ScenarioBuilder sendMessageScenario2 = CoreDsl.scenario("Send message scenario2")
