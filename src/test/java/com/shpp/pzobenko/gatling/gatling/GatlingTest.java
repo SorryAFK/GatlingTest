@@ -6,22 +6,22 @@ import io.gatling.javaapi.http.HttpDsl;
 import io.gatling.javaapi.http.HttpProtocolBuilder;
 
 public class GatlingTest extends Simulation  {
-  HttpProtocolBuilder httpProtocol = HttpDsl.http.baseUrl("http://127.0.0.1:5000");
-//      "http://gptua-env.eba-8ie5nmtu.eu-central-1.elasticbeanstalk.com/");
+  HttpProtocolBuilder httpProtocol = HttpDsl.http
+      .baseUrl( "http://gptua-env.eba-8ie5nmtu.eu-central-1.elasticbeanstalk.com/");
 
   public GatlingTest() {
     this.setUp(
         Scenario.sendMessageScenario1.injectOpen(
-            CoreDsl.constantUsersPerSec(1000).during(5)
+            CoreDsl.constantUsersPerSec(1000).during(30)
         ),
         Scenario.sendMessageScenario2.injectOpen(
-            CoreDsl.constantUsersPerSec(1000).during(5)
+            CoreDsl.constantUsersPerSec(1000).during(30)
         ),
         Scenario.sendMessageScenario3.injectOpen(
-            CoreDsl.constantUsersPerSec(1000).during(5)
+            CoreDsl.constantUsersPerSec(1000).during(30)
         ),
         Scenario.sendMessageScenario4.injectOpen(
-            CoreDsl.constantUsersPerSec(1000).during(5)
+            CoreDsl.constantUsersPerSec(1000).during(30)
         )
     ).protocols(httpProtocol);
   }
