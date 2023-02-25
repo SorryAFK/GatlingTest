@@ -16,13 +16,13 @@ public class GatlingTest extends Simulation {
             CoreDsl.constantUsersPerSec(10).during(10)
         ),
         Scenario.sendMessageScenario2.injectOpen(
-            CoreDsl.constantUsersPerSec(10).during(30)
+            CoreDsl.constantUsersPerSec(10).during(10)
         ),
         Scenario.sendMessageScenario3.injectOpen(
-            CoreDsl.constantUsersPerSec(10).during(30)
+            CoreDsl.constantUsersPerSec(10).during(10)
         ),
         Scenario.sendMessageScenario4.injectOpen(
-            CoreDsl.constantUsersPerSec(10).during(30)
+            CoreDsl.constantUsersPerSec(10).during(10)
         )
     ).protocols(httpProtocol);
   }
